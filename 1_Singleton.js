@@ -17,7 +17,7 @@ class Database {
 }
 
 const baza = new Database('baza MongoDB')
-console.log(baza.getData())
+console.log(baza.getData())       //baza MongoDB
 
 const sqlBaza = new Database('baza sql')
-console.log(sqlBaza.getData())
+console.log(sqlBaza.getData())    //baza MongoDB
