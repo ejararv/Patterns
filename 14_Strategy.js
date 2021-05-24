@@ -33,6 +33,8 @@ class Kontekst {
         return _strategia.RozwiazProblem()
     }
 }
+
+
 const kontekst = new Kontekst()
 console.log(kontekst.ZwrocProblem(new SpecyficznaStrategiaA))
 console.log(kontekst.ZwrocProblem(new SpecyficznaStrategiaB))

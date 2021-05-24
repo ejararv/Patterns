@@ -1,23 +1,22 @@
-class Database {
-    constructor(data) {
-        if (Database.exist) {
-            return Database.instance
+class Singleton {
+    constructor(_instancja) {
+        if (Singleton.exist) {
+            return Singleton.instance
         }
 
 
-        Database.instance = this
-        Database.exist = true
-        this.data = data
+        Singleton.instance = this
+        Singleton.exist = true
+        this._instancja = _instancja
 
     }
 
-    getData(){
-        return this.data
+    getInstancja(){
+        return this._instancja
     }
 }
 
-const baza = new Database('baza MongoDB')
-console.log(baza.getData())       //baza MongoDB
-
-const sqlBaza = new Database('baza sql')
-console.log(sqlBaza.getData())    //baza MongoDB
+const singletonPierwszy = new Singleton('MongoDB')
+console.log(singletonPierwszy.getInstancja())      
+const singletonDrugi = new Singleton('sql')
+console.log(singletonDrugi.getInstancja())    
